@@ -21,6 +21,7 @@ public class UrlController {
     private UrlServes urlServes;
 
     @PostMapping("/shortUrl")
+            // responseEntity create HTTP responses with custom status codes,
     public ResponseEntity<Url> ShorterUrl(@RequestParam String url){
         return ResponseEntity.ok(urlServes.ShorterUrl(url));
     }
